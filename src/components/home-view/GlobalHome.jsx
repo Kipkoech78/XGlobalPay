@@ -4,6 +4,7 @@ import Hero from './Hero'
 import Features from './Features'
 import FastTransfer from './FastTransfer'
 import Services from './Services'
+import Speciality from './Speciality'
 
 function GlobalHome() {
   return (
@@ -16,9 +17,9 @@ function GlobalHome() {
     </section>
     <section className='bg-blue-50 items-center px-10 w-full'> <FastTransfer />  </section>
     <section className='bg-white px-10 w-full'> <Services />  </section>
+    <section className='bg-blue-50 px-10 w-full'> <Speciality />  </section>
       
     </div>
   )
 }
-
 export default GlobalHome
