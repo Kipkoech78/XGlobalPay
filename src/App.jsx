@@ -11,8 +11,9 @@ import AdminLayout from './components/admin-view/AdminLayout'
 import AdminHome from './pages/admin-view/AdminHome'
 import GlobalHome from './components/home-view/GlobalHome'
 import HomeLayout from './components/home-view/HomeLayout'
+import DashBoardLayout from './components/home-view/DashBoardLayout'
 function App() {
-  const [isAuthenticated,setIsAuthenticated] = useState(false);
+  const [isAuthenticated,setIsAuthenticated] = useState(true);
   const [isLoading, setIsLoading] = useState(false)
   const user ={
     role:'user',
@@ -47,6 +48,19 @@ function App() {
           }
         >
         <Route path="home" element={<GlobalHome />} />
+        <Route path="dashboard" element={<DashBoardLayout />} />
+
+        </Route>
+        <Route
+          path="/xpay"
+          element={
+            <CheckAuth isAuthenticated={isAuthenticated} user={user}>
+               <DashBoardLayout /> 
+            </CheckAuth>
+          }
+        >
+      
+        <Route path="dashboard" element={<p>Hello World</p>} />
 
         </Route>
         <Route

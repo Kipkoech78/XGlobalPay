@@ -22,9 +22,10 @@ function CheckAuth({ isAuthenticated, user, children }) {
     return user?.role === "admin" ? (
       <Navigate to="admin/dashboard" />
     ) : (
-      <Navigate to="globalpay/dashboard" />
+      <Navigate to="globalpay/dashboard" /> || <Navigate  to='/xpay/dashboard'/>
     );
   }
+  
   // Prevent regular users from accessing admin routes
   if (
     isAuthenticated &&

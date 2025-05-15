@@ -3,11 +3,11 @@ import { Outlet } from 'react-router-dom'
 
 function AuthLayout() {
   return (
-    <div className='flex min-h-screen w-full'>
-    <div className='hidden lg:flex items-center justify-center bg-red-500 w-1/3'>
+    <div className='fixed  flex min-h-screen w-full'>
+    <div className='hidden z-0 lg:flex items-center justify-center bg-red-500 w-1/3'>
 
     </div>
-    <div className='flex flex-1 items-center justify-start bg-background  sm:px-6 lg:px-0 w-full' >
+    <div className=' relative mr-[-60px] flex flex-1 items-center justify-start bg-background z-10  sm:px-6 lg:px-0 w-full' >
         <Outlet />
     </div>
     </div>

@@ -12,9 +12,6 @@ const initialState  = {
   password:'',
   confirmPassword:'',
   Currency:''
-  
-  
-
 }
 function AuthRegister() {
   const [formData, setFormData] = useState(initialState)
@@ -24,7 +21,7 @@ function AuthRegister() {
 
   }
   return (
-    <div className="min-h-screen w-340 flex items-center justify-start bg-white">
+    <div className=" min-h-screen w-340 flex items-center justify-start bg-white">
       <div className="flex w-full   shadow-xl rounded-lg overflow-hidden">
         {/* Left Panel */}
         <div className="w-1/2 lg:p-40 sm:p-12 bg-[#b4002f] text-white flex flex-col items-center justify-center ">
